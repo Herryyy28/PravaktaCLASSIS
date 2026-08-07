@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useState } from "react";
-import { Loader2, CheckCircle, Target, TrendingUp, Handshake, Headphones } from "lucide-react";
+import { Loader2, CheckCircle, Target, TrendingUp, Handshake, Headphones, MapPin, Calendar, Activity } from "lucide-react";
 
 const franchiseSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -38,6 +38,11 @@ export default function FranchisePage() {
     { title: "High ROI Potential", icon: TrendingUp, desc: "Education is an evergreen sector with excellent return on investment." },
     { title: "Marketing Support", icon: Handshake, desc: "Get comprehensive branding, digital marketing, and lead generation support." },
     { title: "Training & Tech Support", icon: Headphones, desc: "We provide complete faculty training and an operational tech stack." },
+  ];
+
+  const existingFranchises = [
+    { city: "Surat, Gujarat", name: "Surat Premium Center", established: "2021", status: "Active & Growing" },
+    { city: "Valsad, Gujarat", name: "Valsad City Center", established: "2023", status: "Active & Growing" },
   ];
 
   return (
@@ -120,6 +125,53 @@ export default function FranchisePage() {
                   {isSubmitting ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Submitting...</> : "Submit Application"}
                 </button>
               </form>
+            </div>
+          </div>
+        </div>
+
+        {/* Existing Franchises Section */}
+        <div className="mt-24">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Our Growing Network</h2>
+            <p className="text-slate-600 max-w-2xl mx-auto">
+              Join our rapidly expanding family of successful franchise centers delivering quality English education.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {existingFranchises.map((center, idx) => (
+              <div key={idx} className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                <div className="h-12 w-12 bg-navy text-white rounded-xl flex items-center justify-center mb-5">
+                  <MapPin className="h-6 w-6" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">{center.name}</h3>
+                <div className="space-y-3 mt-4">
+                  <div className="flex items-center text-sm text-slate-600">
+                    <MapPin className="h-4 w-4 text-gold mr-2" />
+                    {center.city}
+                  </div>
+                  <div className="flex items-center text-sm text-slate-600">
+                    <Calendar className="h-4 w-4 text-gold mr-2" />
+                    Established in {center.established}
+                  </div>
+                  <div className="flex items-center text-sm text-green-600 font-medium bg-green-50 w-fit px-3 py-1 rounded-full mt-2">
+                    <Activity className="h-4 w-4 mr-1.5" />
+                    {center.status}
+                  </div>
+                </div>
+              </div>
+            ))}
+            
+            {/* CTA Card for New Franchise */}
+            <div className="bg-gradient-navy p-6 rounded-2xl shadow-sm flex flex-col justify-center items-center text-center text-white min-h-[250px]">
+              <div className="h-12 w-12 bg-white/10 rounded-full flex items-center justify-center mb-4">
+                <Target className="h-6 w-6 text-gold" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Your City Next?</h3>
+              <p className="text-white/70 text-sm mb-4">Bring Pravakta Academy to your city and start your journey today.</p>
+              <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-gold text-sm font-semibold hover:text-white transition-colors uppercase tracking-wider">
+                Apply Now →
+              </button>
             </div>
           </div>
         </div>

@@ -52,7 +52,7 @@ export default function AboutSection() {
               <p className="font-heading font-bold text-navy text-center text-sm">Founder &amp; Director</p>
               <p className="text-slate-500 text-xs text-center mt-1">Pravakta Academy</p>
               <div className="flex justify-center gap-1 mt-2">
-                {[1,2,3,4,5].map(i => <span key={i} className="text-gold text-xs">★</span>)}
+                {[1, 2, 3, 4, 5].map(i => <span key={i} className="text-gold text-xs">★</span>)}
               </div>
             </motion.div>
 
@@ -79,7 +79,7 @@ export default function AboutSection() {
               Pravakta Spoken English was founded with a single mission: to eliminate language barriers and empower every Indian to communicate confidently in English — whether in the classroom, boardroom, or on the global stage.
             </p>
             <p className="text-slate-600 leading-relaxed mb-8">
-              Over the past decade, we have trained 10,000+ students from diverse backgrounds, crafting personalized learning journeys that focus on practical conversation, critical thinking, and career growth. Our award-winning methodology blends classroom learning with real-world application to deliver measurable results.
+              Over the past decade, we have trained 2,000+ students from diverse backgrounds, crafting personalized learning journeys that focus on practical conversation, critical thinking, and career growth. Our award-winning methodology blends classroom learning with real-world application to deliver measurable results.
             </p>
 
             {/* Values list */}
