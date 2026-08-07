@@ -5,10 +5,10 @@ import Link from "next/link";
 import { CheckCircle, TrendingUp, Headphones, Megaphone, Download, ArrowRight } from "lucide-react";
 
 const benefits = [
-  { icon: CheckCircle, title: "Proven Brand",            desc: "Leverage 10+ years of established brand recognition and trust in the education sector." },
-  { icon: TrendingUp,  title: "High ROI",                desc: "Education is recession-proof. Enjoy excellent returns with minimal operational risk." },
-  { icon: Headphones,  title: "Complete Training",       desc: "We train your faculty and staff with our proven teaching methodology from day one." },
-  { icon: Megaphone,   title: "Marketing Support",       desc: "Get digital marketing, branding, leads, and promotional materials from our team." },
+  { icon: CheckCircle, title: "Proven Brand", desc: "Leverage 10+ years of established brand recognition and trust in the education sector." },
+  { icon: TrendingUp, title: "High ROI", desc: "Education is recession-proof. Enjoy excellent returns with minimal operational risk." },
+  { icon: Headphones, title: "Complete Training", desc: "We train your faculty and staff with our proven teaching methodology from day one." },
+  { icon: Megaphone, title: "Marketing Support", desc: "Get digital marketing, branding, leads, and promotional materials from our team." },
 ];
 
 export default function FranchisePromo() {
@@ -82,12 +82,12 @@ export default function FranchisePromo() {
             className="grid grid-cols-2 gap-5"
           >
             {[
-              { num: "20+",    label: "Active Franchises",    emoji: "🏢" },
-              { num: "₹5L+",   label: "Starting Investment",  emoji: "💰" },
-              { num: "30%+",   label: "Avg. Annual ROI",      emoji: "📈" },
-              { num: "100%",   label: "Training Provided",    emoji: "🎓" },
-              { num: "15+",    label: "Cities Available",     emoji: "📍" },
-              { num: "24/7",   label: "Ongoing Support",      emoji: "🤝" },
+              { num: "2+", label: "Active Franchises", emoji: "🏢" },
+              { num: "₹50K+", label: "Starting Investment", emoji: "💰" },
+              { num: "30%+", label: "Avg. Annual ROI", emoji: "📈" },
+              { num: "100%", label: "Training Provided", emoji: "🎓" },
+              { num: "15+", label: "Cities Available", emoji: "📍" },
+              { num: "24/7", label: "Ongoing Support", emoji: "🤝" },
             ].map((item) => (
               <div key={item.label} className="card-glass rounded-2xl p-6 text-center">
                 <p className="text-3xl mb-2">{item.emoji}</p>

@@ -2,30 +2,29 @@ import Link from "next/link";
 import { BookOpen, Facebook, Instagram, Linkedin, Twitter, Youtube, Send } from "lucide-react";
 
 const quickLinks = [
-  { href: "/about",     label: "About Us" },
-  { href: "/courses",   label: "Courses" },
-  { href: "/faculty",   label: "Faculty" },
-  { href: "/gallery",   label: "Gallery" },
+  { href: "/about", label: "About Us" },
+  { href: "/courses", label: "Courses" },
+  { href: "/faculty", label: "Faculty" },
+  { href: "/gallery", label: "Gallery" },
   { href: "/franchise", label: "Franchise" },
-  { href: "/faq",       label: "FAQ" },
-  { href: "/contact",   label: "Contact" },
+  { href: "/faq", label: "FAQ" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const programs = [
-  { href: "/courses#basic",          label: "Basic Spoken English" },
-  { href: "/courses#advanced",       label: "Advanced Spoken English" },
-  { href: "/courses#ielts",          label: "IELTS Preparation" },
-  { href: "/courses#pte",            label: "PTE Academic" },
-  { href: "/courses#corporate",      label: "Corporate English" },
-  { href: "/courses#public-speaking",label: "Public Speaking" },
+  { href: "/courses#basic", label: "Basic Spoken English" },
+  { href: "/courses#advanced", label: "Advanced Spoken English" },
+  { href: "/courses#pte", label: "PTE Academic" },
+  { href: "/courses#corporate", label: "Corporate English" },
+  { href: "/courses#public-speaking", label: "Public Speaking" },
 ];
 
 const socials = [
-  { Icon: Facebook,  href: "#", label: "Facebook",  color: "hover:text-blue-400" },
-  { Icon: Instagram, href: "#", label: "Instagram",  color: "hover:text-pink-400" },
-  { Icon: Linkedin,  href: "#", label: "LinkedIn",   color: "hover:text-blue-300" },
-  { Icon: Youtube,   href: "#", label: "YouTube",    color: "hover:text-red-400" },
-  { Icon: Twitter,   href: "#", label: "X/Twitter",  color: "hover:text-sky-400" },
+  { Icon: Facebook, href: "#", label: "Facebook", color: "hover:text-blue-400" },
+  { Icon: Instagram, href: "#", label: "Instagram", color: "hover:text-pink-400" },
+  { Icon: Linkedin, href: "#", label: "LinkedIn", color: "hover:text-blue-300" },
+  { Icon: Youtube, href: "#", label: "YouTube", color: "hover:text-red-400" },
+  { Icon: Twitter, href: "#", label: "X/Twitter", color: "hover:text-sky-400" },
 ];
 
 export default function Footer() {
@@ -126,8 +125,8 @@ export default function Footer() {
         <div className="container py-5 flex flex-col sm:flex-row justify-between items-center gap-3 text-sm text-slate-500">
           <p>© {new Date().getFullYear()} Pravakta Spoken English. All rights reserved.</p>
           <div className="flex gap-5">
-            <Link href="/privacy-policy"    className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="/terms-conditions"  className="hover:text-white transition-colors">Terms & Conditions</Link>
+            <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/terms-conditions" className="hover:text-white transition-colors">Terms & Conditions</Link>
           </div>
         </div>
       </div>

@@ -58,7 +58,7 @@ export default function AboutSection() {
 
             {/* Experience badge */}
             <div className="absolute -top-4 -left-4 bg-gold rounded-2xl shadow-gold px-5 py-3 text-navy">
-              <p className="font-heading font-extrabold text-2xl leading-none">10+</p>
+              <p className="font-heading font-extrabold text-2xl leading-none">12+</p>
               <p className="text-xs font-semibold">Years Exp.</p>
             </div>
           </motion.div>

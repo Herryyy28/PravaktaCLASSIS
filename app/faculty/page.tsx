@@ -12,8 +12,8 @@ const faculty = [
     id: 1,
     name: "John Doe",
     role: "Senior English Trainer",
-    experience: "10+ years",
-    bio: "Specializes in IELTS training and corporate communication. Former IELTS examiner with British Council.",
+    experience: "12+ years",
+    bio: "Specializes in Spoken English & Soft Skills training and corporate communication. Former IELTS examiner with British Council.",
   },
   {
     id: 2,
@@ -41,7 +41,7 @@ export default function FacultyPage() {
             Learn from the best in the industry. Our trainers are certified professionals dedicated to your success.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {faculty.map((member) => (
             <div key={member.id} className="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 hover:shadow-xl transition-all duration-300">

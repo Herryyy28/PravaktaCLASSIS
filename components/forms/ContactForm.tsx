@@ -3,8 +3,7 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { useState } from "react";
-import { Loader2, CheckCircle, MessageCircle, Mail } from "lucide-react";
+import { MessageCircle, Mail } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -17,53 +16,36 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>;
 
 export default function ContactForm() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-
   const {
     register,
     handleSubmit,
-    reset,
     formState: { errors },
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
   });
 
-  const onSubmit = async (data: FormData) => {
-    setIsSubmitting(true);
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    console.log(data);
-    setIsSubmitting(false);
-    setIsSuccess(true);
-    reset();
-    setTimeout(() => setIsSuccess(false), 5000);
+  const formatMessage = (data: FormData) => {
+    return `*New Website Enquiry*\n\n*Name:* ${data.name}\n*Email:* ${data.email}\n*Phone:* ${data.phone}\n*Subject:* ${data.subject}\n*Message:*\n${data.message}`;
+  };
+
+  const handleWhatsApp = (data: FormData) => {
+    const text = formatMessage(data);
+    const encodedText = encodeURIComponent(text);
+    window.open(`https://wa.me/919712305346?text=${encodedText}`, "_blank");
+  };
+
+  const handleEmail = (data: FormData) => {
+    const body = `New Website Enquiry\n\nName: ${data.name}\nEmail: ${data.email}\nPhone: ${data.phone}\n\nMessage:\n${data.message}`;
+    const encodedSubject = encodeURIComponent(`Website Enquiry: ${data.subject}`);
+    const encodedBody = encodeURIComponent(body);
+    window.open(`mailto:1989nspatil@mail.com?subject=${encodedSubject}&body=${encodedBody}`, "_blank");
   };
 
   return (
     <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-4">
-        <h3 className="text-2xl font-bold">Send us a Message</h3>
-        <div className="flex items-center gap-3">
-          <a href="https://wa.me/919712305346" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-green-50 text-green-600 hover:bg-green-100 rounded-lg text-sm font-semibold transition-colors">
-            <MessageCircle className="h-4 w-4" />
-            WhatsApp
-          </a>
-          <a href="mailto:1989nspatil@mail.com" className="flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-lg text-sm font-semibold transition-colors">
-            <Mail className="h-4 w-4" />
-            Email
-          </a>
-        </div>
-      </div>
+      <h3 className="text-2xl font-bold mb-6">Send us a Message</h3>
       
-      {isSuccess && (
-        <div className="mb-6 p-4 bg-green-50 text-green-700 rounded-lg flex items-center gap-3">
-          <CheckCircle className="h-5 w-5" />
-          <p>Thank you! Your message has been sent successfully.</p>
-        </div>
-      )}
-
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+      <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1">Full Name</label>
@@ -118,20 +100,25 @@ export default function ContactForm() {
           {errors.message && <p className="mt-1 text-sm text-red-500">{errors.message.message}</p>}
         </div>
 
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className="btn-primary w-full md:w-auto min-w-[160px]"
-        >
-          {isSubmitting ? (
-            <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              Sending...
-            </>
-          ) : (
-            "Send Message"
-          )}
-        </button>
+        <div className="flex flex-col sm:flex-row gap-4 pt-2">
+          <button
+            type="button"
+            onClick={handleSubmit(handleWhatsApp)}
+            className="flex-1 flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+          >
+            <MessageCircle className="h-5 w-5" />
+            Send via WhatsApp
+          </button>
+          
+          <button
+            type="button"
+            onClick={handleSubmit(handleEmail)}
+            className="flex-1 flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+          >
+            <Mail className="h-5 w-5" />
+            Send via Email
+          </button>
+        </div>
       </form>
     </div>
   );
