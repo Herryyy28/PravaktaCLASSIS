@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useState } from "react";
-import { Loader2, CheckCircle } from "lucide-react";
+import { Loader2, CheckCircle, MessageCircle, Mail } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -42,7 +42,19 @@ export default function ContactForm() {
 
   return (
     <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-      <h3 className="text-2xl font-bold mb-6">Send us a Message</h3>
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-4">
+        <h3 className="text-2xl font-bold">Send us a Message</h3>
+        <div className="flex items-center gap-3">
+          <a href="https://wa.me/919712305346" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-green-50 text-green-600 hover:bg-green-100 rounded-lg text-sm font-semibold transition-colors">
+            <MessageCircle className="h-4 w-4" />
+            WhatsApp
+          </a>
+          <a href="mailto:1989nspatil@mail.com" className="flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-lg text-sm font-semibold transition-colors">
+            <Mail className="h-4 w-4" />
+            Email
+          </a>
+        </div>
+      </div>
       
       {isSuccess && (
         <div className="mb-6 p-4 bg-green-50 text-green-700 rounded-lg flex items-center gap-3">

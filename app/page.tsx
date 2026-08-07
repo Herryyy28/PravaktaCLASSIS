@@ -18,7 +18,7 @@ import ContactSection from "@/components/sections/home/ContactSection";
 export const metadata: Metadata = {
   title: "Pravakta Spoken English | India's Premier English Coaching Institute",
   description:
-    "Master English communication with Pravakta Academy. IELTS, PTE, Spoken English, Corporate Training & Franchise opportunities. 10,000+ students trained. Join today!",
+    "Master English communication with Pravakta Academy. IELTS, PTE, Spoken English, Corporate Training & Franchise opportunities. 2,000+ students trained. Join today!",
   keywords: [
     "Spoken English Classes", "IELTS Coaching", "PTE Training", "English Speaking",
     "Pravakta Academy", "Best English Institute", "Franchise Opportunity",

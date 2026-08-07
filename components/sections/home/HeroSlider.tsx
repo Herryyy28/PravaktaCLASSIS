@@ -21,7 +21,7 @@ const slides = [
   {
     id: 2,
     gradient: "from-[#06172a] via-[#0a2d5a] to-[#1a56db]",
-    badge: "10,000+ Students Trained",
+    badge: "2,000+ Students Trained",
     headline: "Confidence in",
     highlight: "Every Conversation",
     subline:

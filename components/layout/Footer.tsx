@@ -58,7 +58,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed mb-6">
-              India's premier spoken English coaching institute, empowering 10,000+ students with the confidence to communicate globally since 2014.
+              India's premier spoken English coaching institute, empowering 2,000+ students with the confidence to communicate globally since 2014.
             </p>
             {/* Social */}
             <div className="flex gap-3 flex-wrap">
