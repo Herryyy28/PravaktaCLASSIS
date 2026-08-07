@@ -39,6 +39,9 @@ export const metadata: Metadata = {
     description: "2,000+ Students Trained. Expert Faculty. Franchise Available.",
   },
   robots: { index: true, follow: true },
+  verification: {
+    google: "1uEGFc7Hn8H9d-3npBONREiARushhwsa_eS-hPAhFgc",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
