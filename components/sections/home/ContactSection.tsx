@@ -1,11 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock, Send, Loader2, CheckCircle } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { useState } from "react";
 
 const schema = z.object({
   name:    z.string().min(2, "Name is required"),
@@ -24,17 +23,23 @@ const info = [
 ];
 
 export default function ContactSection() {
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
-  const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>({ resolver: zodResolver(schema) });
+  const { register, handleSubmit, formState: { errors } } = useForm<FormData>({ resolver: zodResolver(schema) });
 
-  const onSubmit = async () => {
-    setLoading(true);
-    await new Promise((r) => setTimeout(r, 1400));
-    setLoading(false);
-    setSuccess(true);
-    reset();
-    setTimeout(() => setSuccess(false), 5000);
+  const formatMessage = (data: FormData) => {
+    return `*New Enquiry (Home Page)*\n\n*Name:* ${data.name}\n*Phone:* ${data.phone}\n*Course:* ${data.course}\n*Message:*\n${data.message || 'No additional message'}`;
+  };
+
+  const handleWhatsApp = (data: FormData) => {
+    const text = formatMessage(data);
+    const encodedText = encodeURIComponent(text);
+    window.open(`https://wa.me/919712305346?text=${encodedText}`, "_blank");
+  };
+
+  const handleEmail = (data: FormData) => {
+    const body = `New Enquiry (Home Page)\n\nName: ${data.name}\nPhone: ${data.phone}\nCourse: ${data.course}\n\nMessage:\n${data.message || 'No additional message'}`;
+    const encodedSubject = encodeURIComponent(`Website Enquiry for: ${data.course}`);
+    const encodedBody = encodeURIComponent(body);
+    window.open(`mailto:1989nspatil@mail.com?subject=${encodedSubject}&body=${encodedBody}`, "_blank");
   };
 
   return (
@@ -83,14 +88,7 @@ export default function ContactSection() {
           >
             <h3 className="font-heading text-xl font-bold text-navy mb-6">Quick Enquiry Form</h3>
 
-            {success && (
-              <div className="flex items-center gap-3 bg-green-50 text-green-700 p-4 rounded-xl mb-6">
-                <CheckCircle className="h-5 w-5 shrink-0" />
-                <p className="text-sm font-medium">Thank you! We'll contact you within 2 hours.</p>
-              </div>
-            )}
-
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+            <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
                   <label className="block text-sm font-medium text-slate-700 mb-1.5">Full Name *</label>
@@ -99,7 +97,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-slate-700 mb-1.5">Phone Number *</label>
-                  <input {...register("phone")} className="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm focus:border-royal focus:outline-none focus:ring-2 focus:ring-royal/20 transition" placeholder="+91 XXXXX XXXXX" />
+                  <input {...register("phone")} className="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm focus:border-royal focus:outline-none focus:ring-2 focus:ring-royal/20 transition" placeholder="+91 97123 05346" />
                   {errors.phone && <p className="mt-1 text-xs text-red-500">{errors.phone.message}</p>}
                 </div>
               </div>
@@ -124,9 +122,25 @@ export default function ContactSection() {
                 <textarea {...register("message")} rows={4} className="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm focus:border-royal focus:outline-none focus:ring-2 focus:ring-royal/20 transition resize-none" placeholder="Any specific questions or requirements..." />
               </div>
 
-              <button type="submit" disabled={loading} className="btn-navy btn-lg w-full sm:w-auto">
-                {loading ? <><Loader2 className="h-4 w-4 animate-spin" /> Sending...</> : <><Send className="h-4 w-4" /> Send Enquiry</>}
-              </button>
+              <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                <button
+                  type="button"
+                  onClick={handleSubmit(handleWhatsApp)}
+                  className="flex-1 flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-xl text-sm font-medium transition-colors"
+                >
+                  <MessageCircle className="h-4 w-4" />
+                  Send via WhatsApp
+                </button>
+                
+                <button
+                  type="button"
+                  onClick={handleSubmit(handleEmail)}
+                  className="flex-1 flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-xl text-sm font-medium transition-colors"
+                >
+                  <Mail className="h-4 w-4" />
+                  Send via Email
+                </button>
+              </div>
             </form>
           </motion.div>
         </div>
