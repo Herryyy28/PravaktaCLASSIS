@@ -31,6 +31,12 @@ export default function TermsAndConditions() {
             <h2 className="text-2xl font-bold text-slate-900 mb-4">4. Intellectual Property</h2>
             <p>All study materials, videos, and content provided during the course are the intellectual property of Pravakta Academy and are for personal use only. Unauthorized distribution is strictly prohibited.</p>
           </section>
+
+          <div className="pt-12 mt-12 border-t border-slate-200">
+            <p className="text-sm text-slate-500 flex items-center justify-center gap-1">
+              Website Designed & Developed by <span className="font-semibold text-slate-700">Herry Prajapati (Software Developer)</span>
+            </p>
+          </div>
         </div>
       </div>
     </div>
