@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --navy:  #0a1f44;
+    --royal: #1a56db;
+    --gold:  #f59e0b;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    @apply bg-white text-slate-700 font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-navy tracking-tight;
+  }
+
+  ::selection {
+    @apply bg-gold/30 text-navy;
+  }
+}
+
+@layer components {
+  /* ── Buttons ── */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-60;
+  }
+  .btn-navy {
+    @apply btn bg-navy text-white px-6 py-3 text-sm
+           hover:bg-navy-700 hover:shadow-premium active:scale-95;
+  }
+  .btn-royal {
+    @apply btn bg-royal text-white px-6 py-3 text-sm
+           hover:bg-royal-dark hover:shadow-lg active:scale-95;
+  }
+  .btn-gold {
+    @apply btn bg-gold text-navy font-bold px-6 py-3 text-sm
+           hover:bg-gold-dark hover:shadow-gold active:scale-95;
+  }
+  .btn-outline-white {
+    @apply btn border-2 border-white text-white px-6 py-3 text-sm
+           hover:bg-white hover:text-navy active:scale-95;
+  }
+  .btn-lg {
+    @apply px-8 py-4 text-base;
+  }
+
+  /* ── Cards ── */
+  .card {
+    @apply bg-white rounded-2xl border border-slate-100 shadow-sm
+           transition-all duration-300 hover:shadow-premium hover:-translate-y-1;
+  }
+  .card-glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20
+           rounded-2xl shadow-glass;
+  }
+
+  /* ── Section Helpers ── */
+  .section-py   { @apply py-20 md:py-28; }
+  .section-title { @apply font-heading text-3xl md:text-4xl font-bold text-navy mb-4; }
+  .section-sub  { @apply text-slate-500 text-lg max-w-2xl mx-auto; }
+
+  /* ── Container ── */
+  .container { @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8; }
+
+  /* ── Badge ── */
+  .badge-gold  { @apply inline-block bg-gold/10 text-gold-dark rounded-full px-4 py-1 text-sm font-semibold mb-4; }
+  .badge-royal { @apply inline-block bg-royal/10 text-royal rounded-full px-4 py-1 text-sm font-semibold mb-4; }
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar        { width: 6px; }
+::-webkit-scrollbar-track  { background: #f1f5f9; }
+::-webkit-scrollbar-thumb  { background: #1a56db; border-radius: 3px; }
