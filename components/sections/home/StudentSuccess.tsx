@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { Trophy, GraduationCap, TrendingUp, Star } from "lucide-react";
 
 const highlights = [
-  { icon: GraduationCap, num: "2,000+", label: "Certified Students",     color: "text-blue-500",   bg: "bg-blue-50" },
-  { icon: TrendingUp,    num: "87%",     label: "Placement Success Rate",  color: "text-green-500",  bg: "bg-green-50" },
-  { icon: Trophy,        num: "150+",    label: "Awards & Recognitions",   color: "text-amber-500",  bg: "bg-amber-50" },
-  { icon: Star,          num: "4.9/5",   label: "Average Student Rating",  color: "text-purple-500", bg: "bg-purple-50" },
+  { icon: GraduationCap, num: "6,000+", label: "Certified Students", color: "text-blue-500", bg: "bg-blue-50" },
+  { icon: TrendingUp, num: "87%", label: "Placement Success Rate", color: "text-green-500", bg: "bg-green-50" },
+  { icon: Trophy, num: "150+", label: "Awards & Recognitions", color: "text-amber-500", bg: "bg-amber-50" },
+  { icon: Star, num: "4.9/5", label: "Average Student Rating", color: "text-purple-500", bg: "bg-purple-50" },
 ];
 
 const stories = [
