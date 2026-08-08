@@ -5,12 +5,12 @@ import { motion, useInView } from "framer-motion";
 import { Award, Users, Briefcase, Building2, Star, TrendingUp } from "lucide-react";
 
 const stats = [
-  { icon: Award,     value: 12,    suffix: "+",  label: "Years of Excellence",     color: "text-gold" },
-  { icon: Users,     value: 2000,  suffix: "+",  label: "Students Trained",        color: "text-royal-light" },
-  { icon: TrendingUp,value: 5,     suffix: "+",  label: "Successful Professionals",color: "text-green-400" },
-  { icon: Briefcase, value: 100,   suffix: "+",  label: "Corporate Trainings",     color: "text-purple-400" },
-  { icon: Building2, value: 2,     suffix: "+",  label: "Franchise Centers",       color: "text-gold" },
-  { icon: Star,      value: 95,    suffix: "%",  label: "Student Satisfaction",    color: "text-royal-light" },
+  { icon: Award, value: 15, suffix: "+", label: "Years of Excellence", color: "text-gold" },
+  { icon: Users, value: 6000, suffix: "+", label: "Students Trained", color: "text-royal-light" },
+  { icon: TrendingUp, value: 5, suffix: "+", label: "Successful Professionals", color: "text-green-400" },
+  { icon: Briefcase, value: 100, suffix: "+", label: "Corporate Trainings", color: "text-purple-400" },
+  { icon: Building2, value: 2, suffix: "+", label: "Franchise Centers", color: "text-gold" },
+  { icon: Star, value: 95, suffix: "%", label: "Student Satisfaction", color: "text-royal-light" },
 ];
 
 function Counter({ value, suffix }: { value: number; suffix: string }) {

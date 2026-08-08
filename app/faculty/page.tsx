@@ -17,7 +17,7 @@ const faculty = [
   },
   {
     id: 2,
-    name: "Jane Smith",
+    name: "Nilesh bhaii",
     role: "Spoken English Expert",
     experience: "8 years",
     bio: "Expert in accent neutralization and building confidence in public speaking for adult learners.",
