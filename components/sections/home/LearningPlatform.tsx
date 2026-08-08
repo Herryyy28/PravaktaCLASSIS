@@ -17,7 +17,7 @@ const features = [
   { icon: CheckSquare,   title: "Practice Exercises",          desc: "Interactive quizzes and drills after every lesson to reinforce what you've learned.",    color: "bg-cyan-50 text-cyan-600" },
   { icon: BookOpen,      title: "Grammar & Vocabulary",        desc: "Dedicated modules covering English grammar rules and vocabulary building exercises.",    color: "bg-indigo-50 text-indigo-600" },
   { icon: Mic,           title: "Speaking Practice",           desc: "AI-powered voice exercises and pronunciation drills to sharpen your speaking skills.",   color: "bg-pink-50 text-pink-600" },
-  { icon: ClipboardList, title: "Mock Tests",                  desc: "Timed full-length mock tests that simulate the real exam experience for IELTS & PTE.",  color: "bg-orange-50 text-orange-600" },
+  { icon: ClipboardList, title: "Practical Tests",               desc: "Timed practical tests that simulate real-world computer scenarios.",  color: "bg-orange-50 text-orange-600" },
   { icon: BarChart3,     title: "Progress Tracking",           desc: "Visual dashboards showing your growth, scores, and areas that need improvement.",       color: "bg-teal-50 text-teal-600" },
   { icon: FileText,      title: "Study Materials",             desc: "Downloadable PDFs, notes, and reference sheets curated by our expert faculty.",         color: "bg-violet-50 text-violet-600" },
   { icon: Upload,        title: "Assignment Access",           desc: "Submit assignments digitally and receive detailed feedback directly from your trainer.", color: "bg-lime-50 text-lime-600" },
@@ -98,7 +98,7 @@ function TabletMockup() {
             <div className="h-4 w-4 rounded-full bg-gold/80" />
           </div>
           <div className="p-2 space-y-1.5">
-            {["Spoken English", "Grammar Pro", "IELTS Prep"].map((c) => (
+            {["Spoken English", "Grammar Pro", "Computer Class"].map((c) => (
               <div key={c} className="flex items-center gap-1.5 bg-white/10 rounded-lg px-2 py-1.5">
                 <div className="h-3 w-3 rounded bg-gold/70 shrink-0" />
                 <span className="text-white text-[8px]">{c}</span>

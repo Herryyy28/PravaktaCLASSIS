@@ -23,8 +23,8 @@ const faqs = [
     answer: "To ensure personalized attention, we keep our batch sizes small. Typical batches consist of 10-15 students."
   },
   {
-    question: "Do you provide materials for IELTS/PTE preparation?",
-    answer: "Yes, all IELTS and PTE students receive comprehensive, up-to-date study materials, including mock tests, practice questions, and speaking topics."
+    question: "Do you provide materials for Computer Classes?",
+    answer: "Yes, all Computer class students receive comprehensive, up-to-date study materials, including practical exercises, software notes, and digital shortcuts."
   }
 ];
 

@@ -8,7 +8,7 @@ const galleryItems = [
   { label: "Speaking Activity",   color: "from-purple-400 to-purple-600", h: "h-64", emoji: "🎙️" },
   { label: "Group Discussion",    color: "from-green-400 to-green-600",   h: "h-48", emoji: "💬" },
   { label: "Smart Class",         color: "from-amber-400 to-amber-600",   h: "h-72", emoji: "📺" },
-  { label: "IELTS Workshop",      color: "from-red-400 to-red-600",       h: "h-48", emoji: "📚" },
+  { label: "Computer Lab",      color: "from-red-400 to-red-600",       h: "h-48", emoji: "💻" },
   { label: "Award Ceremony",      color: "from-cyan-400 to-cyan-600",     h: "h-56", emoji: "🏆" },
   { label: "Graduation Day",      color: "from-indigo-400 to-indigo-600", h: "h-64", emoji: "🎓" },
   { label: "Student Interaction", color: "from-pink-400 to-pink-600",     h: "h-48", emoji: "🤝" },

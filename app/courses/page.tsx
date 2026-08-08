@@ -4,7 +4,7 @@ import { Clock, Users, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Courses",
-  description: "Explore our Spoken English, IELTS, and PTE preparation courses.",
+  description: "Explore our Spoken English and Computer preparation courses.",
 };
 
 const courses = [
@@ -39,19 +39,14 @@ const courses = [
     color: "amber",
   },
   {
-    id: "ielts",
-    title: "IELTS / PTE Preparation",
-    description: "Comprehensive training to help you achieve your desired band score for studying or working abroad.",
-    duration: "2 Months",
-    mode: "Offline / Online",
-    level: "Intermediate to Advanced",
-    features: [
-      "Intensive Mock Tests",
-      "Speaking & Writing Feedback",
-      "Time Management Strategies",
-      "Latest Study Materials",
-    ],
-    color: "slate",
+    id: "computer",
+    title: "Computer Classes",
+    description: "Targeted strategies and practice to help you achieve your desired computer skills for studying or working.",
+    duration: "2-3 Months",
+    mode: "Offline",
+    level: "Beginner - Advanced",
+    features: ["MS Office", "Typing", "Internet Surfing", "Tally ERP", "Graphic Design"],
+    color: "emerald",
   },
 ];
 

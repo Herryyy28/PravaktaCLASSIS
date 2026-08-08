@@ -13,7 +13,7 @@ const faculty = [
     name: "John Doe",
     role: "Senior English Trainer",
     experience: "12+ years",
-    bio: "Specializes in Spoken English & Soft Skills training and corporate communication. Former IELTS examiner with British Council.",
+    bio: "Specializes in Spoken English & Soft Skills training and corporate communication. Certified Computer Instructor.",
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const faculty = [
   {
     id: 3,
     name: "Robert Chen",
-    role: "PTE Master Trainer",
+    role: "Computer Master Trainer",
     experience: "5 years",
     bio: "Focuses on advanced grammar and test strategies. Consistently produces high-scoring students.",
   },

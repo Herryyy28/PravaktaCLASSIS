@@ -108,8 +108,7 @@ export default function ContactSection() {
                   <option value="">Select a course</option>
                   <option value="basic">Basic Spoken English</option>
                   <option value="advanced">Advanced Spoken English</option>
-                  <option value="ielts">IELTS Preparation</option>
-                  <option value="pte">PTE Academic</option>
+                  <option value="computer">Computer Classes</option>
                   <option value="corporate">Corporate English</option>
                   <option value="kids">Kids English</option>
                   <option value="franchise">Franchise Enquiry</option>

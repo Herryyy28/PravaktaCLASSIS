@@ -5,9 +5,9 @@ import Link from "next/link";
 import { Linkedin } from "lucide-react";
 
 const faculty = [
-  { name: "Priya Sharma",    role: "Lead English Trainer",   exp: "12 Years", spec: "IELTS & Corporate English", lang: "Hindi · English · Marathi", initials: "PS", color: "from-blue-500 to-blue-700" },
+  { name: "Priya Sharma",    role: "Lead English Trainer",   exp: "12 Years", spec: "Basic & Corporate English", lang: "Hindi · English · Marathi", initials: "PS", color: "from-blue-500 to-blue-700" },
   { name: "Rahul Verma",     role: "Spoken English Expert",  exp: "8 Years",  spec: "Phonetics & Accent Training", lang: "Hindi · English",          initials: "RV", color: "from-purple-500 to-purple-700" },
-  { name: "Anjali Desai",    role: "PTE Master Trainer",     exp: "7 Years",  spec: "PTE & Communication Skills",  lang: "Hindi · English · Gujarati", initials: "AD", color: "from-amber-500 to-amber-700" },
+  { name: "Anjali Desai",    role: "Computer Master Trainer",     exp: "7 Years",  spec: "Computer & Communication Skills",  lang: "Hindi · English · Gujarati", initials: "AD", color: "from-amber-500 to-amber-700" },
   { name: "Suresh Kumar",    role: "Corporate Trainer",      exp: "10 Years", spec: "Business English & GD/PI",    lang: "Hindi · English · Telugu",   initials: "SK", color: "from-green-500 to-green-700" },
 ];
 

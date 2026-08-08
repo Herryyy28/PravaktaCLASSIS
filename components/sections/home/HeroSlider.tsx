@@ -45,14 +45,14 @@ const slides = [
   {
     id: 4,
     gradient: "from-[#0d1b2a] via-[#1a3a5c] to-[#0a1f44]",
-    badge: "IELTS · PTE · Spoken English",
-    headline: "Crack IELTS & PTE",
+    badge: "Basic · Advanced · Computer",
+    headline: "Master Computer Skills",
     highlight: "With Expert Guidance",
     subline:
-      "Achieve your target band score with our intensive preparation program, real mock tests, and personalised feedback sessions.",
-    cta1: { label: "IELTS / PTE",      href: "/courses#ielts" },
+      "Enhance your digital literacy with our intensive computer training program, practical exercises, and personalized feedback sessions.",
+    cta1: { label: "Computer Classes", href: "/courses#computer" },
     cta2: { label: "Book Free Demo",   href: "/contact" },
-    tag: "🌍 Global Opportunities",
+    tag: "💻 Digital Literacy",
   },
   {
     id: 5,
@@ -169,10 +169,10 @@ export default function HeroSlider() {
         {/* Stats row */}
         <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-white/10 pt-10">
           {[
-            { num: "10+",   label: "Years Experience" },
-            { num: "10K+",  label: "Students Trained" },
+            { num: "12+",   label: "Years Experience" },
+            { num: "2,000+",  label: "Students Trained" },
             { num: "95%",   label: "Satisfaction Rate" },
-            { num: "20+",   label: "Franchise Centers" },
+            { num: "2+",   label: "Franchise Centers" },
           ].map((s) => (
             <div key={s.label} className="text-center">
               <p className="font-heading text-3xl font-extrabold text-gold">{s.num}</p>

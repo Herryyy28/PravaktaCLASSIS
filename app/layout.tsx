@@ -25,8 +25,8 @@ export const metadata: Metadata = {
     template: "%s | Pravakta Spoken English",
   },
   description:
-    "Master English communication with Pravakta Academy. IELTS, PTE, Spoken English, Corporate Training & Franchise opportunities. 2,000+ students trained. Join today!",
-  keywords: ["Spoken English", "IELTS Coaching", "PTE Preparation", "English Coaching", "Pravakta Academy"],
+    "Master English communication with Pravakta Academy. Spoken English, Computer Classes, Corporate Training & Franchise opportunities. 2,000+ students trained. Join today!",
+  keywords: ["Spoken English", "Computer Classes", "Basic Computer", "English Coaching", "Pravakta Academy"],
   openGraph: {
     type: "website",
     locale: "en_IN",

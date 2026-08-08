@@ -15,7 +15,7 @@ const features = [
   { icon: Heart,         title: "Affordable Fees",              desc: "World-class English training at tuition fees that are accessible to all.", color: "bg-pink-50 text-pink-600" },
   { icon: Clock,         title: "Flexible Timings",             desc: "Morning, afternoon, evening, and weekend batches to fit your busy lifestyle.", color: "bg-cyan-50 text-cyan-600" },
   { icon: TrendingUp,    title: "Placement Guidance",           desc: "Career counselling, resume building, and placement assistance post-course.", color: "bg-indigo-50 text-indigo-600" },
-  { icon: Globe,         title: "IELTS / PTE Expertise",        desc: "Proven strategies to achieve your target score in IELTS, PTE, and TOEFL.", color: "bg-teal-50 text-teal-600" },
+  { icon: Globe,         title: "Computer Classes",        desc: "Master digital skills from basic operations to advanced accounting and design software.", color: "bg-teal-50 text-teal-600" },
   { icon: BookOpen,      title: "Real-Life Communication",      desc: "Role plays, debates, presentations — we prepare you for the real world.", color: "bg-orange-50 text-orange-600" },
 ];
 

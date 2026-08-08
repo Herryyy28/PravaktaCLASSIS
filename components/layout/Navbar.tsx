@@ -14,8 +14,7 @@ const navLinks = [
     children: [
       { href: "/courses#basic", label: "Basic Spoken English" },
       { href: "/courses#advanced", label: "Advanced Spoken English" },
-      { href: "/courses#ielts", label: "IELTS Preparation" },
-      { href: "/courses#pte", label: "PTE Preparation" },
+      { href: "/courses#computer", label: "Computer Classes" },
       { href: "/courses#corporate", label: "Corporate English" },
     ],
   },

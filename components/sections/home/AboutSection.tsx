@@ -58,7 +58,7 @@ export default function AboutSection() {
 
             {/* Experience badge */}
             <div className="absolute -top-4 -left-4 bg-gold rounded-2xl shadow-gold px-5 py-3 text-navy">
-              <p className="font-heading font-extrabold text-2xl leading-none">12+</p>
+              <p className="font-heading font-extrabold text-2xl leading-none">15+</p>
               <p className="text-xs font-semibold">Years Exp.</p>
             </div>
           </motion.div>
@@ -79,7 +79,7 @@ export default function AboutSection() {
               Pravakta Spoken English was founded with a single mission: to eliminate language barriers and empower every Indian to communicate confidently in English — whether in the classroom, boardroom, or on the global stage.
             </p>
             <p className="text-slate-600 leading-relaxed mb-8">
-              Over the past decade, we have trained 2,000+ students from diverse backgrounds, crafting personalized learning journeys that focus on practical conversation, critical thinking, and career growth. Our award-winning methodology blends classroom learning with real-world application to deliver measurable results.
+              Over the past decade, we have trained 6,000+ students from diverse backgrounds, crafting personalized learning journeys that focus on practical conversation, critical thinking, and career growth. Our award-winning methodology blends classroom learning with real-world application to deliver measurable results.
             </p>
 
             {/* Values list */}

@@ -14,7 +14,7 @@ const quickLinks = [
 const programs = [
   { href: "/courses#basic", label: "Basic Spoken English" },
   { href: "/courses#advanced", label: "Advanced Spoken English" },
-  { href: "/courses#pte", label: "PTE Academic" },
+  { href: "/courses#computer", label: "Computer Classes" },
   { href: "/courses#corporate", label: "Corporate English" },
   { href: "/courses#public-speaking", label: "Public Speaking" },
 ];

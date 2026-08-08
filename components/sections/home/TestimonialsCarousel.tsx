@@ -16,10 +16,10 @@ const testimonials = [
   },
   {
     name: "Arjun Mehta",
-    course: "IELTS Preparation",
-    profession: "Graduate Student, UK",
+    course: "Computer Classes",
     rating: 5,
-    review: "I achieved Band 8.0 in IELTS on my first attempt! The mock tests and personalized feedback from my trainer were exceptional. If you want IELTS success, this is the only place to be.",
+    avatar: "S",
+    review: "I learned everything from basic MS Office to advanced typing! The practical exercises and personalized feedback from my trainer were exceptional. Highly recommended for Computer Classes.",
     initials: "AM",
     color: "from-purple-500 to-purple-700",
   },
